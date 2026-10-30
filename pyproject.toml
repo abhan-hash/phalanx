@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phalanx"
+version = "0.1.0"
+description = "Autonomous Adversarial Red-Teaming & Self-Hardening Suite for NVIDIA Nemotron Agents on Nebius"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "openai>=1.0.0",
+  "pydantic>=2.0.0",
+  "pyyaml>=6.0",
+  "rich>=13.0.0",
+  "click>=8.0.0",
+  "fastapi>=0.100.0",
+  "uvicorn>=0.22.0",
+  "requests>=2.28.0",
+  "python-dotenv>=1.0.0"
+]
+
+[project.scripts]
+phalanx = "phalanx.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
