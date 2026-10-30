@@ -589,8 +589,8 @@ def cmd_render(out_path: str | None) -> None:
 
 
 @main.command("serve")
-@click.option("--host", default="0.0.0.0", show_default=True)
-@click.option("--port", default=8000, show_default=True)
+@click.option("--host", default=os.environ.get("HOST", "0.0.0.0"), show_default=True)
+@click.option("--port", default=int(os.environ.get("PORT", 8000)), show_default=True)
 def cmd_serve(host: str, port: int) -> None:
     """Start the PHALANX Web Server and REST API."""
     import uvicorn

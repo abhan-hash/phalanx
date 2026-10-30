@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: phalanx
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -e ."
+    startCommand: "python3 -m phalanx.cli serve"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: PORT
+        value: 8000
