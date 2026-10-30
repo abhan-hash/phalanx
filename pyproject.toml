@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Autonomous Adversarial Red-Teaming & Self-Hardening Suite for NVIDIA Nemotron Agents on Nebius"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "Apache-2.0" }
+license = "Apache-2.0"
 dependencies = [
   "openai>=1.0.0",
   "pydantic>=2.0.0",
